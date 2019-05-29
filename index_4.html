@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <style>
+            #title{
+                background-color: darkgray;
+                width: 304px;
+                height: 30px;
+            }
+            #t2{
+                font-size: 14px;
+                text-align: center;
+                padding-top: 7px;
+                font-weight: bold;
+            }
+            #test1{
+                border: 2px black solid;
+            }
+            
+        </style>        
+    </head>
+
+    <body>
+        <center id = "test1">
+        <div id = "title" style="position: relative; height: 30px; width: 90vw;">
+            <p id = "t2">My First Window</p>
+        </div>
+        <br>
+
+        Enter address:
+        <input type="text" id="addr">
+        <input type="button" value="GO!" onclick="loadSite()">
+
+        <br><br>
+
+        <iframe id="window" src="" style=" height: 80vh; width: 90vw;">
+            iframes not supported.
+        </iframe>
+        </center>
+        
+    </body>
+
+    <script>
+        function loadSite(){
+            document.getElementById('window').setAttribute('src', document.getElementById('addr').value)
+        }
+    </script>
+
+</html>

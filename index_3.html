@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <style>
+            #title{
+                background-color: darkgray;
+                width: 304px;
+                height: 30px;
+            }
+            #t2{
+                font-size: 14px;
+                text-align: center;
+                padding-top: 7px;
+                font-weight: bold;
+            }
+            #test1{
+                border: 2px black solid;
+            }
+            
+        </style>
+    </head>
+
+    <body>
+        <center id = "test1">
+        <div id = "title" style="position: relative; height: 30px; width: 90vw;">
+            <p id = "t2">My First Window</p>
+        </div>
+        <br>
+        <div id = "selector">
+            Select website:
+            <select name="" id="dropdown">
+                <option value="0" selected>Select...</option>
+                <option value="1">Wikipedia</option>
+                <option value="2">Bing</option>
+                <option value="3">Pexels</option>
+            </select>
+            <input type="button" value="Submit" onclick="loadSite()">
+        </div>
+        <br><br>
+
+        <iframe id="window" src="" style="position: relative; height: 80vh; width: 90vw;">
+            iframes not supported
+        </iframe>
+        </center>
+        
+    </body>
+
+    <script>
+        function loadSite(){
+            if (document.getElementById('dropdown').value == 1){
+                document.getElementById('window').setAttribute('src', "https://www.wikipedia.org")
+            }
+            else if (document.getElementById('dropdown').value == 2){
+                document.getElementById('window').setAttribute('src', "https://www.bing.com")
+            }
+            else if (document.getElementById('dropdown').value == 3){
+                document.getElementById('window').setAttribute('src', "https://www.pexels.com")
+            }
+            
+        }
+    </script>
+
+</html>
